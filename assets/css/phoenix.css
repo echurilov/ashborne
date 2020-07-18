@@ -27,6 +27,12 @@ pre{padding: 1em;}
 select {
   width: auto;
 }
+ul {
+  list-style: none;
+  min-height: 20em;
+  padding: 1em;
+}
+
 
 /* Phoenix promo and logo */
 .phx-hero {

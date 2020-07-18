@@ -2,7 +2,7 @@
   <h1><%= gettext "Welcome to %{name}!", name: "Ashborne" %></h1>
 </section>
 
-<ul id='msg-log' class='row'></ul>
+<ul id='msg-log' class='column'></ul>
 
 <section class="row">
   <article class="column column-20">
