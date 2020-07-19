@@ -3,7 +3,15 @@
 <ul>
 
   <li>
-    <strong>Content:</strong>
+    <strong>id:</strong>
+    <%= @leaf.id %>
+  </li>
+  <li>
+    <strong>squirrel:</strong>
+    <%= @leaf.squirrel_id %>
+  </li>
+  <li>
+    <strong>content:</strong>
     <%= @leaf.content %>
   </li>
 

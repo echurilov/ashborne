@@ -3,7 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Content</th>
+      <th>id</th>
+      <th>squirrel_id</th>
+      <th>content</th>
 
       <th></th>
     </tr>
@@ -11,6 +13,8 @@
   <tbody>
 <%= for leaf <- @leaf do %>
     <tr>
+      <td><%= leaf.id %></td>
+      <td><%= leaf.squirrel_id %></td>
       <td><%= leaf.content %></td>
 
       <td>

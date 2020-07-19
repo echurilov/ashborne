@@ -1,6 +1,6 @@
 defmodule AshborneWeb.TwigChannel do
   use AshborneWeb, :channel
-  alias Ashborne.Leafs.Leaf
+  alias Ashborne.Leafs
 
   @impl true
   def join("twig:lobby", payload, socket) do
@@ -22,7 +22,7 @@ defmodule AshborneWeb.TwigChannel do
   # broadcast to everyone in the current topic (twig:lobby).
   @impl true
   def handle_in("shout", payload, socket) do
-    Leaf.changeset(%Leaf{}, payload) |> Ashborne.Repo.insert  
+    Leafs.create_leaf(payload)
     broadcast socket, "shout", payload
     {:noreply, socket}
   end

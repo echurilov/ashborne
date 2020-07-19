@@ -32,8 +32,8 @@ let leaf = document.getElementById('leaf');
 leaf.addEventListener('keypress', function (event) {
     if (event.keyCode == 13 && leaf.value.length > 0) {
         channel.push('shout', {
-            squirrel: squirrel.value,
-            leaf: leaf.value
+            squirrel_id: squirrel.value,
+            content: leaf.value
         });
         leaf.value = '';
     }
