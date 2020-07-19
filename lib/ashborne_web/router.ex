@@ -18,6 +18,7 @@ defmodule AshborneWeb.Router do
 
     get "/", PageController, :index
     resources "/squirrels", SquirrelController
+    resources "/leafs", LeafController
   end
 
   # Other scopes may use custom stacks.

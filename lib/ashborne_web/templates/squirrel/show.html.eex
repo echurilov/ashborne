@@ -3,6 +3,10 @@
 <ul>
 
   <li>
+    <strong>id:</strong>
+    <%= @squirrel.id %>
+  </li>
+  <li>
     <strong>email:</strong>
     <%= @squirrel.email %>
   </li>

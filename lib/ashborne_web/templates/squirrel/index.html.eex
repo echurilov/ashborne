@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>id</th>
       <th>email</th>
       <th>handle</th>
 
@@ -12,6 +13,7 @@
   <tbody>
 <%= for squirrel <- @squirrels do %>
     <tr>
+      <td><%= squirrel.id %></td>
       <td><%= squirrel.email %></td>
       <td><%= squirrel.handle %></td>
 

@@ -1,0 +1,26 @@
+<h1>Listing Leaf</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for leaf <- @leaf do %>
+    <tr>
+      <td><%= leaf.content %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.leaf_path(@conn, :show, leaf) %></span>
+        <span><%= link "Edit", to: Routes.leaf_path(@conn, :edit, leaf) %></span>
+        <span><%= link "Delete", to: Routes.leaf_path(@conn, :delete, leaf), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Leaf", to: Routes.leaf_path(@conn, :new) %></span>

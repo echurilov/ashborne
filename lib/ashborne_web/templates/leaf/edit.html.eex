@@ -1,0 +1,5 @@
+<h1>Edit Leaf</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.leaf_path(@conn, :update, @leaf)) %>
+
+<span><%= link "Back", to: Routes.leaf_path(@conn, :index) %></span>

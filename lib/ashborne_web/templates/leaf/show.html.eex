@@ -1,0 +1,13 @@
+<h1>Show Leaf</h1>
+
+<ul>
+
+  <li>
+    <strong>Content:</strong>
+    <%= @leaf.content %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.leaf_path(@conn, :edit, @leaf) %></span>
+<span><%= link "Back", to: Routes.leaf_path(@conn, :index) %></span>
