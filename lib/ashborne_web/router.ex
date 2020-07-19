@@ -17,6 +17,7 @@ defmodule AshborneWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    resources "/squirrels", SquirrelController
   end
 
   # Other scopes may use custom stacks.

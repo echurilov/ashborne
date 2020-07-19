@@ -1,0 +1,18 @@
+<h1>Show Squirrel</h1>
+
+<ul>
+
+  <li>
+    <strong>email:</strong>
+    <%= @squirrel.email %>
+  </li>
+
+  <li>
+    <strong>handle:</strong>
+    <%= @squirrel.handle %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.squirrel_path(@conn, :edit, @squirrel) %></span>
+<span><%= link "Back", to: Routes.squirrel_path(@conn, :index) %></span>

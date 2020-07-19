@@ -1,0 +1,28 @@
+<h1>Listing Squirrels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>email</th>
+      <th>handle</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for squirrel <- @squirrels do %>
+    <tr>
+      <td><%= squirrel.email %></td>
+      <td><%= squirrel.handle %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.squirrel_path(@conn, :show, squirrel) %></span>
+        <span><%= link "Edit", to: Routes.squirrel_path(@conn, :edit, squirrel) %></span>
+        <span><%= link "Delete", to: Routes.squirrel_path(@conn, :delete, squirrel), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Squirrel", to: Routes.squirrel_path(@conn, :new) %></span>

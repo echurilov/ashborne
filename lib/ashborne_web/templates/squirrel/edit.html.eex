@@ -1,0 +1,5 @@
+<h1>Edit Squirrel</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.squirrel_path(@conn, :update, @squirrel)) %>
+
+<span><%= link "Back", to: Routes.squirrel_path(@conn, :index) %></span>
