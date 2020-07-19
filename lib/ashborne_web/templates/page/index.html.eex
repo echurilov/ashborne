@@ -2,13 +2,13 @@
   <h1><%= gettext "Welcome to %{name}!", name: "Ashborne" %></h1>
 </section>
 
-<ul id='msg-log' class='column'></ul>
+<ul id='leaf-log' class='column'></ul>
 
 <section class="row">
   <article class="column column-20">
-    <input type="text" id="user" class="form-control" placeholder="username" autofocus>
+    <input type="text" id="squirrel" class="form-control" placeholder="name" autofocus>
   </article>
   <article class="column column-80">
-    <input type="text" id="msg" class="form-control" placeholder="message">
+    <input type="text" id="leaf" class="form-control" placeholder="message">
   </article>
 </section>

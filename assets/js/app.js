@@ -18,23 +18,23 @@ let channel = socket.channel('twig:lobby', {});
 
 channel.on('shout', function (payload) {
     let li = document.createElement("li");
-    let user = payload.user || 'guest';
-    li.innerHTML = '<b>' + user + '</b>: ' + payload.message;
+    let squirrel = payload.squirrel || 'guest';
+    li.innerHTML = '<b>' + squirrel + '</b>: ' + payload.leaf;
     ul.appendChild(li);
 });
 
 channel.join();
 
-let ul = document.getElementById('msg-log');
-let user = document.getElementById('user');
-let msg = document.getElementById('msg');
+let ul = document.getElementById('leaf-log');
+let squirrel = document.getElementById('squirrel');
+let leaf = document.getElementById('leaf');
 
-msg.addEventListener('keypress', function (event) {
-    if (event.keyCode == 13 && msg.value.length > 0) {
+leaf.addEventListener('keypress', function (event) {
+    if (event.keyCode == 13 && leaf.value.length > 0) {
         channel.push('shout', {
-            user: user.value,
-            message: msg.value
+            squirrel: squirrel.value,
+            leaf: leaf.value
         });
-        msg.value = '';
+        leaf.value = '';
     }
 });
