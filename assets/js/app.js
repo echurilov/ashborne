@@ -14,25 +14,26 @@ import "../css/app.scss"
 //
 import "phoenix_html"
 
-let channel = socket.channel('twig:lobby', {});
+let channel = socket.channel('twig:nest', {});
 
 channel.on('shout', function (payload) {
+    console.log(payload)
     let li = document.createElement("li");
-    let squirrel = payload.squirrel || 'guest';
-    li.innerHTML = '<b>' + squirrel + '</b>: ' + payload.leaf;
+    let squirrel_id = payload.squirrel_id || 'guest';
+    li.innerHTML = '<b>' + squirrel_id + '</b>: ' + payload.content;
     ul.appendChild(li);
 });
 
 channel.join();
 
 let ul = document.getElementById('leaf-log');
-let squirrel = document.getElementById('squirrel');
+let squirrel_id = document.getElementById('squirrel_id');
 let leaf = document.getElementById('leaf');
 
 leaf.addEventListener('keypress', function (event) {
     if (event.keyCode == 13 && leaf.value.length > 0) {
         channel.push('shout', {
-            squirrel_id: squirrel.value,
+            squirrel_id: squirrel_id.value,
             content: leaf.value
         });
         leaf.value = '';

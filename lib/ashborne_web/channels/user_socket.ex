@@ -3,7 +3,7 @@ defmodule AshborneWeb.UserSocket do
 
   ## Channels
   # channel "room:*", AshborneWeb.RoomChannel
-  channel "twig:lobby", AshborneWeb.TwigChannel
+  channel "twig:nest", AshborneWeb.TwigChannel
 
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After

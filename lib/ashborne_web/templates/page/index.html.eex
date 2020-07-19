@@ -6,7 +6,7 @@
 
 <section class="row">
   <article class="column column-20">
-    <input type="text" id="squirrel" class="form-control" placeholder="name" autofocus>
+    <input type="text" id="squirrel_id" class="form-control" placeholder="name" autofocus>
   </article>
   <article class="column column-80">
     <input type="text" id="leaf" class="form-control" placeholder="message">
